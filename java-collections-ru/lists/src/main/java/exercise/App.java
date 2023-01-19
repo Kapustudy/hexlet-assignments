@@ -9,15 +9,16 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
 
-        System.out.println(scramble("lexa", "alexa"));
+        System.out.println(scrabble("rkqodlw", "world"));
+        System.out.println(scrabble("ajv", "java"));
+        System.out.println(scrabble("avjafff", "JaVa"));
+        System.out.println(scrabble("", "hexlet"));
     }
-    public static boolean scramble(String allowedChars, String word) {
+    public static boolean scrabble(String allowedChars, String word) {
         String[] allowedCharsArray = allowedChars.split("");
         String[] wordCharsArray = word.split("");
         List<String> allowedCharList = new ArrayList<>(Arrays.asList(allowedCharsArray));
         List<String> wordCharList = new ArrayList<>(Arrays.asList(wordCharsArray));
-        System.out.println(allowedCharList);
-        System.out.println(wordCharList);
 
         for (String wordChar : wordCharList) {
             boolean flag = false;
